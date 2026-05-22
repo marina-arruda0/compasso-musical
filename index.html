@@ -12,44 +12,94 @@
             padding: 0;
             box-sizing: border-box;
         }
-       .titulo {
-        color:red;
-        background-color: aqua;
-        margin: 50px 20px 100px 150px;
-        padding: 20px 50px 100px 150px;
+
+            body {
+                font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
+                 background-color: #f8f9fa;
+                color: #333333;
+                line-height: 1.6;
+            }
+
+            h1, h2, h3 {
+                color: #1a1a1a;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            ul {
+                list-style-type: disc;
+            }
+
+
+
+.cabecalhoprincipal { 
+    background-color: #f1f1f1;
+    padding: 1.5rem 5%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .titulo {
+        font-size: 1.8rem;
+         font-weight: bold;
+         color: #d32f2f;
        }
 
+       .listaNavegacao {
+        display: flex;
+        gap: 2rem;
+       }
+       .linkNav {
+        font-weight: 500;
+        transition: color 0.3s ease;
+       }
+
+        .linkNav:hover {
+        color: #d32f2f;
+       }
+        
+    
     </style>
 </head>
 <body>
     <!--<Cabeçalho>-->
-        <header>
+        <header id="header" class="cabecalhoprincipal">
          <div id="logo">
-          <h1 class="titulo"  style="color: blue;"
+          <h1 class="titulo" 
           >Compasso Musical</h1>
          </div>  
-         <nav>
-            <ul>
+         <nav id="nav">
+            <ul class="listaNavegacao">
                 <li>
-                    <a href="#hero">Início</a>
+                    <a href="#hero" class="Linknav">Início</a>
                 </li>
                 <li>
-                    <a href="#Sobre">sobre</a>
+                    <a href="#sobre" class="Linknav">sobre</a>
                 </li>
                     <li>
-                        <a href="#Instrumentos">instrumentos</a>
+                        <a href="#instrumentos" class="Linknav">instrumentos</a>
                     </li>
                     <li>
-                        <a href="#Depoimentos">depoimentos</a>
+                        <a href="#depoimentos" class="Linknav">depoimentos</a>
                     </li>
                     <li>
-                        <a href="">Contato</a>
+                        <a href="#contato" class="Linknav">Contato</a>
                     </li>
             </ul>
          </nav> 
         </header>
         <!--Conteúdo principal-->
         <main>
+            <!-- seção hero -->
             <section id="hero">
                  <h2>o som da sua vida começa aqui</h2>
                  <p>
@@ -88,7 +138,7 @@
              </section>
 
                 <!-- seção instrumentos  -->
-                 <section id="Instrumentos">
+                 <section id="instrumentos">
                     <h2>Cátagolo</h2>
                     <article>
                         <h3>Guitarra elétrica StratoCaster</h3>
@@ -127,7 +177,7 @@
                  </section>
 
                  <!-- seção Depoimentos -->
-                  <section id="Depoimentos">
+                  <section id="depoimentos">
                     <h2>o que nossos clientes dizem</h2>
                     <blockquote>
                         "A Compasso Musical tem uma seleção incrível de instrumentos e um atendimento ao cliente excepcional. Comprei minha guitarra lá e estou muito satisfeito com a qualidade e o serviço."
@@ -140,7 +190,7 @@
                     </blockquote>
 
                     <!-- seção contato -->
-                    <section id="Contato">
+                    <section id="contato">
                         <h2>entre em contato</h2>
                         <p>
                             Tem dúvidas ou precisa de ajuda com algum instrtumento? Entre em contato conosco!
