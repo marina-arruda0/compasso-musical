@@ -93,6 +93,30 @@
         font-size: 2.5rem;
         margin-bottom: 2rem;
        }
+       .gradeInstrumentos {
+        display: flex;
+        gap: 2rem;
+        justify-content:center;
+        flex-wrap: wrap;
+       }
+         .cartaoInstrumento {
+          background-color: #fff;
+          padding: 1.5rem;
+          border-radius: 8px;
+          width: 300px;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+          text-align:center;
+          transition: transform 0.3s ease;
+         }
+         .cartaoInstrumento:hover {
+          transform: translateY(-5px);
+          
+         }
+         .nomeInstrumento {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #d32f2f;
+         }
     
     </style>
 </head>
@@ -173,47 +197,50 @@
                         <li style="text-align: left; display: inline-block; margin-top: 1rem;">☑️suporte e atendimento feito por músicos reais</li>
                     </ul>
                 </div>
-             </section>
+            </section>
 
                 <!-- seção instrumentos  -->
-                 <section id="instrumentos">
-                    <h2>Cátagolo</h2>
-                    <article>
-                        <h3>Guitarra elétrica StratoCaster</h3>
-                        <img src="guitarra.jpg" 
-                        alt="guitarra elétrica stratocaster"
-                         width="300"
-                         >
-                         <p>
-                            <strong>Marca: </strong> Fender
-                         </p>
-                         <p>
-                            Guitarra clássica com um design icônico, perfeita para rock, blues e pop. Possui um corpo leve e confortável,
-                             captadores single-coil para um som brilhante e versátil, e um braço em maple para uma tocabilidade suave.
-                         </p>
-                         <p>
-                            <em>Preço: R$ 3.500,00</em>
-                         </p>
-                         <a href="#">Adicionar ao carrinho</a>
-                    </article>
-                        <article>
-                            <h3>Violão acústico Folk</h3>
-                            <img src="violão acustico.jpg" 
-                            alt="violão acústico folk"
-                            width="300"
-                            >
-                            <p>
-                                <strong>Marca: </strong> Yamaha
-                            </p>
-                            <p>
-                                Violão acústico com um corpo dreadnought para um som cheio e ressonante. Feito com madeira de alta qualidade, possui um braço confortável e uma ação baixa para facilitar a tocabilidade.
-                            </p>
-                            <p>
-                                <em>Preço: R$ 1.200,00</em>
-                            </p>
-                            <a href="#">Adicionar ao carrinho</a>
-                 </section>
-
+                 <section id="instrumentos" class="container" style="background-color: #eeeeee;">
+                    <h2 class="tituloSecao">Catálogo de Instrumentos</h2>
+                    <div class="gradeInstrumentos">
+                        <article class="cartaoInstrumento">
+                            <h3 class="nomeInstrumento">Guitarra elétrica StratoCaster</h3>
+                            <img src="guitarra.jpg" 
+                            alt="guitarra elétrica stratocaster"
+                             width="200"
+                             style="border-radius: 4px; margin-bottom: 1rem;"
+                             >
+                             <p>
+                                <strong>Marca: </strong> Fender
+                             </p>
+                             <p>
+                                Guitarra clássica com um design icônico, perfeita para rock, blues e pop. Possui um corpo leve e confortável,
+                                 captadores single-coil para um som brilhante e versátil, e um braço em maple para uma tocabilidade suave.
+                             </p>
+                             <p style="color: #d32f2f; font-weight: bold;font-size: 1.2rem;">
+                                <em>Preço: R$ 3.500,00</em>
+                             </p>
+                             <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+                        </article >
+                            <article class="cartaoInstrumento">
+                                <h3>Violão acústico Folk</h3>
+                                <img src="violão acustico.jpg" 
+                                alt="violão acústico folk"
+                                width="200"
+                                >
+                                <p>
+                                    <strong>Marca: </strong> Yamaha
+                                </p>
+                                <p>
+                                    Violão acústico com um corpo dreadnought para um som cheio e ressonante. Feito com madeira de alta qualidade, possui um braço confortável e uma ação baixa para facilitar a tocabilidade.
+                                </p>
+                                <p style="color: #d32f2f; font-weight: bold;font-size: 1.2rem;">
+                                    <em>Preço: R$ 1.200,00</em>
+                                </p>
+                                <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+                                </article>
+                    </div>
+                         </section>
                  <!-- seção Depoimentos -->
                   <section id="depoimentos">
                     <h2>o que nossos clientes dizem</h2>
