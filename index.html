@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>compasso musical - Loja de instrumentos músicais</title>
-
-    <!-- CSS INTERNO -->
+    <title>Compasso Musical - Loja de instrumentos Musicais</title>
+    <!--CSS Interno-->
     <style>
         * {
             margin: 0;
@@ -13,337 +13,350 @@
             box-sizing: border-box;
         }
 
-            body {
-                font-family: 'segoe ui', Tahoma, Geneva, Verdana, sans-serif;
-                 background-color: #f8f9fa;
-                color: #333333;
-                line-height: 1.6;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .cabecalhoPrincipal {
+            background-color: #ffffff;
+            padding: 1.5rem 5%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .titulo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .listaNavegacao {
+            display: flex;
+            gap: 2rem;
+        }
+
+            .linkNav {
+                font-weight: 500;
+                transition: color 0.3s ease;
             }
 
-            h1, h2, h3 {
-                color: #1a1a1a;
+            .linkNav:hover {
+                color: #d32f2f;
             }
+       
+        .botaoPricipal {
+            display: inline-block;
+            background-color: #d32f2f;
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-            p {
-                margin-bottom: 1rem;
-            }
+        .botaoPricipal:hover {
+            background-color: #b71c1c;
+            color: #ffffff;
+        }
 
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
+        .container {
+            padding: 4rem 5%;
+        }
 
-            ul {
-                list-style-type: disc;
-            }
+        .tituloSecao {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
 
+        .gradeInstrumentos {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
+        .cartaoInstrumento {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-.cabecalhoprincipal { 
-    background-color: #f1f1f1;
-    padding: 1.5rem 5%;
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .cartaoInstrumento:hover {
+            transform: translateY(-5px);
+        }
 
-    .titulo {
-        font-size: 1.8rem;
-         font-weight: bold;
-         color: #d32f2f;
-       }
-
-       .listaNavegacao {
-        display: flex;
-        gap: 2rem;
-       }
-       .linkNav {
-        font-weight: 500;
-        transition: color 0.3s ease;
-       }
-
-        .linkNav:hover {
-        color: #d32f2f;
-       }
-
-       .botaoPrincipal {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
-        background-color: #d32f2f;
-        color: #fff;
-        border-radius: 4px;
-        font-weight: bold;
-        margin-top: 1rem;
-        transition: background-color 0.3s ease;
-       }
-
-        
-       .botaoPrincipal:hover {
-        background-color: #b71c1c;
-        color: #ffff;
-       }
-
-       .container {
-        padding: 4rem 5%;
-       }
-
-       .tituloSecao {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-       }
-       .gradeInstrumentos {
-        display: flex;
-        gap: 2rem;
-        justify-content:center;
-        flex-wrap: wrap;
-       }
-         .cartaoInstrumento {
-          background-color: #fff;
-          padding: 1.5rem;
-          border-radius: 8px;
-          width: 300px;
-          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-          text-align:center;
-          transition: transform 0.3s ease;
-         }
-         .cartaoInstrumento:hover {
-          transform: translateY(-5px);
-          
-         }
-         .nomeInstrumento {
-          font-size: 1.2rem;
-          margin-bottom: 0.5rem;
-          color: #d32f2f;
-         }
-    
+        .nomeInstrumento {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #d333333;
+        }
     </style>
 </head>
 <body>
-    <!--<Cabeçalho>-->
-        <header id="header" class="cabecalhoprincipal">
-         <div id="logo">
-          <h1 class="titulo" 
-          >Compasso Musical</h1>
-         </div>  
-         <nav id="nav">
+    <!-- Cabeçalho do site -->
+    <header id="header" class="cabecalhoPrincipal">
+        <div id="logo">
+            <h1 class="titulo">Compasso Musical</h1>
+        </div>
+        <nav id="nav">
             <ul class="listaNavegacao">
                 <li>
-                    <a href="#hero" class="Linknav">Início</a>
+                    <a href="#hero" class="linkNav">Inicio</a>
                 </li>
                 <li>
-                    <a href="#sobre" class="Linknav">sobre</a>
+                    <a href="#sobre" class="linkNav">Sobre</a>
                 </li>
-                    <li>
-                        <a href="#instrumentos" class="Linknav">instrumentos</a>
-                    </li>
-                    <li>
-                        <a href="#depoimentos" class="Linknav">depoimentos</a>
-                    </li>
-                    <li>
-                        <a href="#contato" class="Linknav">Contato</a>
-                    </li>
+                <li>
+                    <a href="#instrumentos" class="linkNav">Instrumentos</a>
+                </li>
+                <li>
+                    <a href="#depoimentos" class="linkNav">Depoimentos</a>
+                </li>
+                <li>
+                    <a href="#contato" class="linkNav">Contato</a>
+                </li>
             </ul>
-         </nav> 
-        </header>
-        <!--Conteúdo principal-->
-        <main>
-            <!-- seção hero -->
-            <section id="hero" class="secaoHero" style="background: color #eceff1; text-align: center;padding: 5rem 2rem; border-bottom: 4px solid #d32f2f;">
-                <h2 style="font-size: 3rem; color: #d32f2f;">o som da sua vida começa aqui</h2>
-                 <h2>o som da sua vida começa aqui</h2>
-                 <p  style="font-size: 1.2rem; max-width: 600px; margin:0 auto 2rem auto;">
-                    Encontre as melhores marcas de violinos, trompetes ou violoes
-                 </p>
-                 <img src="banda rock.jpg"
-                  alt="Banda de rock num show usando os instrumentos musicais da compasso musical"
-                  width="600"
-                style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;"
-                 >
-                 <br><br>
-                 <a href="#instrumentos" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: #d32f2f; color: #fff; border-radius: 4px; font-weight: bold; transition: background-color 0.3s ease;">
-                    Ver nossos produtos
-                 </a>
-            </section>
-                 <!--Rodapé do site-->
-        <footer>
-            <div>
-                <h2>compasso músical</h2>
-                <p>
-                Desde 2026, a Compasso Musical tem sido a escolha número um para músicos de todos os níveis. Nossa missão é fornecer instrumentos de alta qualidade e um serviço excepcional 
-                para ajudar nossos clientes a alcançar seu potencial musical máximo. Seja você um iniciante ou um profissional experiente, estamos aqui para apoiar sua jornada musical.
-                </p>
-                <img 
-               
-            >
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Hero -->
+        <section id="hero" class="secaoHero" style="background-color: #e3f2fd; text-align: center; padding: 5rem 2rem; border-bottom: 4px solid #d32f2f;">
+            <h2 style="font-size: 3rem; color: #1a1a1a;w">O som da sua vida começa aqui</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto;">
+                Encontre as melhores marcas de violinos, trompetes ou violoões.
+            </p>
+            <img src="banda rock.jpg"
+                alt="Banda de Sertanejo em seu albúm usando os instrumentos musicais da Compasso Musical" width="600" style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
             <br><br>
-            <a href="">Ver nossas ofertas</a>
-            </section>
+            <a href="#" class="botaoPricipal">Ver nossas ofertas</a>
+        </section>
 
-            <!-- seção sobre -->
-             <section id="sobre" class="container"> 
-                <h2  class="tituloSecao">Sobre a Compasso Musical</h2>
-                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <p>
-                    A Compasso Musical é uma empresa familiar que começou em 2026 com a paixão por música e o desejo de compartilhar essa paixão com o mundo. 
-                    Desde então, crescemos para nos tornar um dos principais fornecedores de instrumentos musicais, atendendo a músicos de todos os níveis e estilos.
-                    </p>
-                    <ul style="text-align: left; display: inline-block; margin-top: 1rem;">
-                        <li style="text-align: left; display: inline-block; margin-top: 1rem;">☑️todos os instrumentos são revisados por nossa 
-                            equipe técnica</li>
-                        <li style="text-align: left; display: inline-block; margin-top: 1rem;">☑️garntia estendida de fábrica.</li>
-                        
-                        <li style="text-align: left; display: inline-block; margin-top: 1rem;">☑️suporte e atendimento feito por músicos reais</li>
-                    </ul>
-                </div>
-            </section>
-
-                <!-- seção instrumentos  -->
-                 <section id="instrumentos" class="container" style="background-color: #eeeeee;">
-                    <h2 class="tituloSecao">Catálogo de Instrumentos</h2>
-                    <div class="gradeInstrumentos">
-                        <article class="cartaoInstrumento">
-                            <h3 class="nomeInstrumento">Guitarra elétrica StratoCaster</h3>
-                            <img src="guitarra.jpg" 
-                            alt="guitarra elétrica stratocaster"
-                             width="200"
-                             style="border-radius: 4px; margin-bottom: 1rem;"
-                             >
-                             <p>
-                                <strong>Marca: </strong> Fender
-                             </p>
-                             <p>
-                                Guitarra clássica com um design icônico, perfeita para rock, blues e pop. Possui um corpo leve e confortável,
-                                 captadores single-coil para um som brilhante e versátil, e um braço em maple para uma tocabilidade suave.
-                             </p>
-                             <p style="color: #d32f2f; font-weight: bold;font-size: 1.2rem;">
-                                <em>Preço: R$ 3.500,00</em>
-                             </p>
-                             <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
-                        </article >
-                            <article class="cartaoInstrumento">
-                                <h3>Violão acústico Folk</h3>
-                                <img src="violão acustico.jpg" 
-                                alt="violão acústico folk"
-                                width="200"
-                                >
-                                <p>
-                                    <strong>Marca: </strong> Yamaha
-                                </p>
-                                <p>
-                                    Violão acústico com um corpo dreadnought para um som cheio e ressonante. Feito com madeira de alta qualidade, possui um braço confortável e uma ação baixa para facilitar a tocabilidade.
-                                </p>
-                                <p style="color: #d32f2f; font-weight: bold;font-size: 1.2rem;">
-                                    <em>Preço: R$ 1.200,00</em>
-                                </p>
-                                <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
-                                </article>
-                    </div>
-                         </section>
-                 <!-- seção Depoimentos -->
-                  <section id="depoimentos">
-                    <h2>o que nossos clientes dizem</h2>
-                    <blockquote>
-                        "A Compasso Musical tem uma seleção incrível de instrumentos e um atendimento ao cliente excepcional. Comprei minha guitarra lá e estou muito satisfeito com a qualidade e o serviço."
-                        <cite>- João Silva</cite>
-                    </blockquote>
-                    <br><br>
-                    <blockquote>
-                        "Sou iniciante e a equipe da Compasso Musical me ajudou a escolher o violão perfeito para começar minha jornada musical. Recomendo a todos!"
-                        <cite>- Maria Oliveira</cite>
-                    </blockquote>
-
-                    <!-- seção contato -->
-                    <section id="contato">
-                        <h2>entre em contato</h2>
-                        <p>
-                            Tem dúvidas ou precisa de ajuda com algum instrtumento? Entre em contato conosco!
-                        </p>
-                        <address></address>
-                            <p>loja física: <strong>Centro histórico - Cuiabá/MT</strong></p>
-                            <p>Telefone: (11) 1234-5678</p>
-                            <p>Email: contato@compassomusical.com</p>
-                        </address>
-                        <form action="">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
-
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required>
-
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" required></textarea>
-                            <br><br>
-                            <option value="vendas">vendas</option>
-                            <option value="Suporte">Suporte tecnico</option>
-                            <option value="financeiro">financeiro</option>
-                            <option value="sugestão">sugestao</option>
-
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </section>
-
-                  </section>
-            </main>
-
-            <nav>
-                <h3>mapa do site</h3>
-                <ul>
-                    <li>
-                        <a href="">Início</a>
-                    </li>
-                    <li>
-                        <a href="">Produtos</a>
-                    </li>
-
-                    <li>
-                        <a href="">Contato</a>
-                </ul>
-            </nav>
-
-            <nav>
-                <h3>informações</h3>
-                <ul>
-                    <li>
-                        <a href="">Termos de Uso</a>
-                    </li>
-                    <li>
-                        <a href="">Política de Privacidade</a>
-                    </li>
-                    <li>
-                        <a href="">Termos de Uso</a>
-                        
-                    </li>
-                </ul>
-            </nav>
-
-            <div>
-                <h3>siga-nos</h3>
-                <div>
-                    <a href="">
-                        <img src="Instagram.png" alt="instagram">
-                    </a>
-                    <a href="">
-                        <img src="Facebook.png" alt="facebook">
-                    </a>
-                    <a href="">
-                        <img src="youtube.png" alt="youtube">
-                </div>
+        <!-- Seção Sobre -->
+        <section id="sobre" class="container">
+            <h2 class="tituloSecao">Sobre a Compasso Musical</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                  <p>
+                Nossa loja nasceu da paixão pela música. Nossa missão é entregar qualidade sonora tanto para quem está
+                aprendendo os primeiros acordes quanto para músicos profissionais.
+            </p>
+            <ul style="text-align: left; display: inline-block; margin-top: 1rem;">
+                <li style="margin-bottom: 0.5rem;">🗸 Todos os intrumentos são revissados por nossa equipe técnica</li>
+                <li style="margin-bottom: 0.5rem;">🗸 Garantia entendida de fábrica</li>
+                <li style="margin-bottom: 0.5rem;">🗸 Suporte de atendimento feito por músicos reais.</li>
+            </ul>
             </div>
+        </section>
 
+        <!-- Seção de Instrumentos -->
+        <section id="instrumentos" class="container" style="background-color: #eeeeee;">
+            <h2 class="tituloSecao">Cátalogo de instrumentos</h2>
+            <div class="gradeInstrumentos">
+                <article class="cartaoInstrumento">
+                    <h3 class="nomeInstrumento">Guitarra Elétrica StratoCaster</h3>
+                    <img src="https://images.unsplash.com/photo-1642322356665-974c658cee81"
+                        alt="Guitarra Elétrica StratoCaster" width="250" style="border-radius: 4px; margin-bottom: 1rem;">
+                    <p>
+                        <strong>Marca: </strong>Fender
+                    </p>
+                    <p>
+                        Guitarra clásssica de alta performance, ideal para rock e blues.
+                    </p>
+                    <p style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;">
+                        <em>Preço: R$ 3.500,00</em>
+                    </p>
+                    <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+                </article>
+                <article class="cartaoInstrumento">
+                    <h3 class="nomeInstrumento">Kit de Bateria</h3>
+                    <img src="https://images.unsplash.com/photo-1543443258-92b04ad5ec6b" alt="Imagem do Kit de Bateria"
+                        width="250" style="border-radius: 4px; margin-bottom: 1rem;">
+                    <p>
+                        <strong>Marca: </strong>Pearl
+                    </p>
+                    <p>
+                        Kit de bateria completo, perfeito para bateristas de todos os níveis.
+                    </p>
+                    <p style="color: #d32f2f; font-weight: bold; font-size: 1.2rem;">
+                        <em>Preço: R$ 13.900,00</em>
+                    </p>
+                    <a href="#" class="botaoPrincipal">Adicionar ao carrinho</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section id="depoimentos" class="container">
+            <h2 class="tituloSecao">O que nossos clientes dizem</h2>
+            <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                <blockquote style="background: #ffffff; padding: 2rem; border-left: 5px solid #d32f2f; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); max-width: 400px;">
+                    <p style="font-style: italic;">
+                        "A batéria chegou super rápido aqui em Cuiabá-MT e perfeitamente embalada. O som é incível."
+                    </p>
+                    <footer style="margin-top: 1rem; font-weight: bold;">
+                        - <cite>Douglas Nunes, baterista</cite>
+                    </footer>
+                </blockquote>
+                <br>
+                <blockquote style="background: #ffffff; padding: 2rem; border-left: 5px solid #d32f2f; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); max-width: 400px;">
+                    <p style="font-style: italic;">
+                        "Comprei minha primeira guitarra na Compasso Musical e foi uma experiência incrível. O atendimento
+                        foi excelente e a qualidade do instrumento superou minhas expectativas."
+                    </p>
+                    <footer style="margin-top: 1rem; font-weight: bold;">
+                        - <cite>Maria Eduarda Ferreti, Estudante de Música</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!--Seção Contatos-->
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <p>
+                Tem dúvidas sobre algum instrumento? Mande uma mensagem ou venha nos visitar.
+            </p>
+            <address>
+                <P>Loja Física: <strong>Centro Histórico, Cuiabá-MT</strong>
+                </p>
+            </address>
+            <form action="#">
+                <label for="nome">Nome Completo</label>
+                <br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                <br><br>
+                <laberl for="email">E-mail</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <br><br>
+                    <label for="departamento">Departamento</label>
+                    <br>
+                    <select id="departamento" name="departamento">
+                        <option value="vendas">Vendas</option>
+                        <option value="suporte">Suporte Técnico</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="sugestao">Sugestões</option>
+                    </select>
+                    <br><br>
+                    <label for="mensagem">Mensagem</label>
+                    <br>
+                    <textarea name="mensagem" id="mensagem" rows="10" placeholder="Digite sua mensagem"></textarea>
+                    <br><br>
+                    <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé do Site -->
+    <footer>
+        <div>
+            <h2>Compasso Musical</h2>
+            <P>
+                Desde 2026 conectando pessoas através da música.
+            </P>
+        </div>
+
+        <nav>
+            <h3>Mapa do Site</h3>
+            <ul>
+                <li>
+                    <a href=" #hero">Inicio</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#produtos">Instrumentos</a>
+                </li>
+                <li>
+                    <a href="#depoimentos">Depoimentos</a>
+                </li>
+                <li>
+                    <a href="#contatos">Contato</a>
+                </li>
+            </ul>
+        </nav>
+
+        <nav>
+            <h3>Informações</h3>
+            <ul>
+                <li>
+                    <a href="#">Termos de Uso</a>
+                </li>
+                <li>
+                    <a href="#">Política de Privacidade</a>
+                </li>
+                <li>
+                    <a href="#">Trocas e Devoluções</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <h3>Siga-nos</h3>
             <div>
-                <h3>newsletter</h3>
-                <p>receba nossas novidades por e-mail!</p>
+                <a href="https://www.instagram.com/compassomusical/" target="_blank">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/compassomusical/" target="_blank">
+                    <img src="facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/compassomusical/" target="_blank">
+                    <img src="youtube.png" alt="YouTube">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h3>Newsletter
+                <p>
+                    Receba promoções exclusibas no seu e-mail
+                </p>
                 <form action="">
-                    <input type="email" placeholder="Digite seu e-mail">
+                    <input type="email" name="email" placeholder="Digite seu e-mail">
                     <button type="submit">Assinar</button>
                 </form>
-            </div>
+            </h3>
+        </div>
 
-            <div>
-                <p>&copy; 2026 Compasso Musical. Todos os direitos reservados.site desenvolvido por Marina Arruda</p>
-            </div>
-        </footer>
+        <div>
+            <p>
+                Copyright &copy; 2026 Compasso Musical - Todos os direitos reservados. Site desenvolvido por
+                Nelson Aura.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
